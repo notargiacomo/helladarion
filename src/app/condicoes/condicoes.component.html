@@ -1,8 +1,13 @@
-<h2>My Heroes</h2>
-<ul class="condicoes">
-    <li *ngFor="let condicao of condicoes" 
-        [class.selected]="condicao === selectedCondicao"
-        (click)="onSelect(condicao)">
-        <span>{{condicao.id}}</span> {{condicao.name}}
-    </li>
-</ul>
+<div>
+    <div fxFlex="20%">
+        <mat-list role="list" *ngFor="let condicao of condicoes" class="list-condicao">
+            <mat-list-item (click)="onSelect(condicao)" role="listitem" class="item-list-condicao">{{ condicao.name }}</mat-list-item>
+        </mat-list>
+    </div>
+    <div fxFlex="80%">
+        <mat-card class="card-condicao" *ngIf="selectedCondicao">
+            <mat-card-title>{{ selectedCondicao.name }} ({{selectedCondicao.type}})</mat-card-title>
+            {{selectedCondicao.description}}
+        </mat-card>
+    </div>
+</div>

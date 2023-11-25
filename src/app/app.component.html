@@ -1,2 +1,13 @@
-{{title}}
-<app-condicoes></app-condicoes>
+<mat-toolbar color="primary">
+    <span>{{ title }}</span>
+    <span fxFlex></span>
+    <button mat-icon-button aria-label="Lista de Condições" 
+    routerLink="condicoes" matTooltip="Condições">
+    <span class="material-symbols-outlined">
+        pacemaker
+    </span>
+    </button>
+</mat-toolbar>
+<div class="content" fxLayoutGap="12px">
+    <router-outlet></router-outlet>
+</div>
