@@ -1,0 +1,8 @@
+<h2>My Heroes</h2>
+<ul class="condicoes">
+    <li *ngFor="let condicao of condicoes" 
+        [class.selected]="condicao === selectedCondicao"
+        (click)="onSelect(condicao)">
+        <span>{{condicao.id}}</span> {{condicao.name}}
+    </li>
+</ul>
