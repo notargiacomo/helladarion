@@ -1,10 +1,10 @@
 <div>
-    <div fxFlex="20%">
-        <mat-list role="list" *ngFor="let condicao of condicoes" class="list-condicao">
-            <mat-list-item (click)="onSelect(condicao)" role="listitem" class="item-list-condicao">{{ condicao.name }}</mat-list-item>
-        </mat-list>
+    <div fxFlex="10%" fxLayoutGap fxLayout="column">
+        <mat-card class="card-condicao" *ngFor="let condicao of condicoes">
+            <mat-card-content (click)="onSelect(condicao)">{{ condicao.name }}</mat-card-content>
+        </mat-card>
     </div>
-    <div fxFlex="80%">
+    <div fxFlex="90%">
         <mat-card class="card-condicao" *ngIf="selectedCondicao">
             <mat-card-title>{{ selectedCondicao.name }} ({{selectedCondicao.type}})</mat-card-title>
             {{selectedCondicao.description}}

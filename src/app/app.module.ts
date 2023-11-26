@@ -14,12 +14,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CondicoesComponent
+    CondicoesComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,9 @@ import { MatListModule } from '@angular/material/list';
     FlexLayoutModule,
     MatButtonModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

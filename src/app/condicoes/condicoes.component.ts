@@ -9,6 +9,7 @@ import { Condicao } from '../model/condicao.model';
 })
 export class CondicoesComponent implements OnInit {
 
+panelOpenState = false;
 condicoes : Condicao[] = [];
 selectedCondicao?: Condicao;
 
